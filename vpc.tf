@@ -16,7 +16,7 @@ resource "aws_vpc" "demo" {
 }
 
 resource "aws_subnet" "demo" {
-  count = 2
+  count = 1
 
   availability_zone = data.aws_availability_zones.available.names[count.index]
   cidr_block        = "10.0.${count.index}.0/24"
